@@ -7,13 +7,17 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+            <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
+        {{ include('/_header.html.twig') }}
+
         {% block body %}{% endblock %}
+     
     </body>
+    {% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    {% endblock %}
 </html>

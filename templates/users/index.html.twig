@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<div class="conteneur-user">
+    <div class="info-user">
+        <div class="guser">
+            <div class="nom-prenom">
+                <p>{{app.user.prenom}}{{app.user.nom}}</p>
+                <p>nombre d'annonces {{app.user.annonces|length}}</p>
+            </div>
+        </div>
+        <div class="duser">
+
+        </div>
+    </div>
+    <div class="annonces-user">
+        {% for annonce in app.user.annonces %}
+            <p>{{annonce.titre}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

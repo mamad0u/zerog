@@ -1,0 +1,32 @@
+<header class="header">
+    <img class="logo" src="{{ asset('img/menu.png') }}" alt="Logo - Nom marque">
+        <nav>
+            <ul class="nav-links">
+                <div class="container-li">
+                    <li class="nav-link"><a class="link-header"
+                        href="{{ path('app_home') }}"><span class="link-ico icon-ico-home"></span>
+                        <span>Accueil</span></a>
+                    </li>
+                     <li class="nav-link"><a class="link-header"
+                        href="{{ path('app_annonces_index') }}"><span class="link-ico icon-ico-home"></span>
+                        <span>Nourriture</span></a>
+                    </li> 
+                </div>
+            </ul>
+        </nav>
+        <div class="content-header">
+            <a href="{{ path('app_annonces_new') }}"> <button>Cree une annonce</button></a>
+            {% if app.user %}
+            <a href="">Mon compte</a>
+            <a href="{{ path('app_logout') }}">Me deconnecter</a>
+            {% else %}
+            <a href="{{ path('app_login') }}">Inscription / Connexion</a>
+            {% endif %}
+        </div>   
+    <img class="brg" src="{{ asset('img/menu.png') }}" alt="Logo - Nom marque">
+</header>
+<div class="mobile-menu">
+    <img class="close" src="{{ asset('img/close.png') }}" alt="Logo - Nom marque">
+
+</div>
+

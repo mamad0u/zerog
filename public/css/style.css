@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-principale:#1e7341 ;
+  }
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    align-items: center ;
+    background-color:var(--color-principale);
+    position: relative;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header img {
+    width: 50px;
+}
+.logo{
+    margin: 0 0 0 40px;
+}
+.brg{
+    margin: 0 40px 0 0;
+}
+.container-li{
+    display: flex;
+}
+.container-li li{
+    padding:0 10px;
+    list-style: none;
+    font-size: 24px;
+}
+
+nav{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-header{
+    padding: 0 100px 0 0 ;
+    display: none;
+}
+header button{
+    padding: 10px 15px;
+    color:#1e7341 ;
+    background-color:white;
+    border-radius: 1000px;
+    border: none;
+}
+.content-header a{
+    padding: 0 2px;
+}
+.annonces-contain{
+    padding: 50px 0;
+}
+.annonces-contain a{
+    color: Black;
+    text-decoration: none;
+}
+.mobile-menu{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateX(-100%);
+    background-color:var(--color-principale);
+    transition: transform 1s;
+}
+.mobile-menu img{
+    width: 50px;
+}
+.mobile-menu-active{
+    transform: translateX(0%);
+}
+
+.annonces{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.annonce{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-control{
+    border: 2px solid var(--color-principale);
+    border-radius: 5px;
+    height: 30px;
+}
+.contain-form{
+    max-width: 900px;
+    width:95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+    -webkit-box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+    -moz-box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+}
+.compte-form{
+    max-width: 600px;
+    width:95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+    -webkit-box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+    -moz-box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+}
+.compte-form .form-control{
+    border: 2px solid var(--color-principale);
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    width: 100%;
+}
+.form-control .area{
+    max-width: 400px;
+}
+.compte-form div{
+margin: 20px 0;
+}
+.gauche{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 15px;
+
+}
+.contain-form h1 ,.compte-form h1{
+    padding:10px 0 0 0;
+    font-size: 28px;
+}
+.contain-form p{
+    font-size:16px;
+    padding: 0 0 15px 0;
+    max-width: 320px;
+}
+.contain-form .form-control{
+    padding: 6px;
+    height: 35px;
+}
+.email-form , .mdp-form{
+    display: flex;
+    margin: 5px 0;
+    flex-direction: column;
+    width: 100%;
+}
+.connexion , .inscription{
+    margin: 10px 0;
+    padding: 17px 28px;
+    color:white ;
+    background-color: #1e7341;
+    border-radius: 1000px;
+    border: none;
+}
+.inscription{
+    background-color:white;
+    color:#1e7341 ;
+}
+.droite a{
+    text-decoration: none;
+}
+.droite h4,.droite p{
+    color: white;
+}
+.vbtn{
+    background-color: #1e7341;
+}
+
+.droite{
+    background-color: #1e7341;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 0 0 15px 15px;
+
+}
+.droite h4{
+    font-size: 28px;
+    padding:5px 0 10px 0;
+}
+
+.btn-compte{
+    margin: 10px 0;
+    padding: 17px 28px;
+    color:white ;
+    background-color: #1e7341;
+    border-radius: 1000px;
+    border: none;
+    width: 100%;
+}
+.info-user{
+    display: flex;
+    background-color: blue;
+}
+.info-user .duser{
+    display: flex;
+}
+.guser{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:10px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+@media screen and (min-width:700px){
+    .contain-form{
+        display: flex;
+        flex-direction: initial; 
+        align-items: center;
+        border-radius: 15px;
+        justify-content: center;
+        margin: 50px auto;
+        height: 500px;
+        box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+        -webkit-box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+        -moz-box-shadow: 0px -1px 12px 2px rgba(207,199,199,0.71);
+    }
+   
+    .gauche{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 50px;
+        border-radius: 15px;
+        width: 50%;
+
+    
+    }
+    .droite{
+        background-color: #1e7341;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px;
+        border-radius: 0px 15px 15px 0px;
+        height: 100%;
+        justify-content: center;
+        width: 50%;
+
+    }
+    .contain-form h1{
+        padding:0px 0 10px 0;
+        font-size: 28px;
+    }
+    .contain-form p{
+        font-size:16px;
+        padding: 0 0 25px 0;
+        max-width: 320px;
+    }
+    .contain-form .form-control{
+        padding: 5px;
+        height: 35px;
+    }
+    .email-form , .mdp-form{
+        display: flex;
+        margin: 10px 0 10px 0;
+        flex-direction: column;
+        width: 100%;
+    }
+    }
+    @media screen and (min-width:1023px){
+        nav{
+            display: block;
+        }
+        .content-header{
+            display: block;
+            padding: 0 20px 0 0 ;
+        }
+        .brg{
+            display: none;
+        }
+        .mobile-menu{
+            display: none;
+        }
+        }
+    

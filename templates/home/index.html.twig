@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<h1>aaaa</h1>
+{% for annonce in annonces %}
+<div class="annonce">
+    <a href="{{ path('app_annonces_show', {'id': annonce.id}) }}"></a>
+<p class="titre">{{ annonce.titre }}</p>
+ </a>
+</div>       
+{% endfor %}  
+
+<a href="{{ path('app_annonces_index') }}" class="vbtn"><button>Voir plus</button></a>
+{% endblock %}
